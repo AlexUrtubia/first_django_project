@@ -1,5 +1,5 @@
 from django.urls import path     
-from .views import roots, index, new, create, show, edit, destroy
+from .views import roots, index, new, create, show, edit, destroy, json
 
 urlpatterns = [
     path('', roots),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('blogs/<int:number>/', show),
     path('blogs/<int:number>/edit/', edit),
     path('blogs/<int:number>/delete/', destroy),
+    path('blogs/json/', json),
 ]

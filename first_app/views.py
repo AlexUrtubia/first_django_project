@@ -1,3 +1,4 @@
+from django.http.response import JsonResponse
 from django.shortcuts import render, HttpResponse, redirect
 
 # Create your views here.
@@ -22,3 +23,10 @@ def edit(request, number):
 
 def destroy (request):
     return redirect("blogs/")
+
+def json (request):
+    respuesta = {
+        "titulo": "Actividad 1",
+        "contenido": "Esta es la primera actividad del módulo"
+    }
+    return JsonResponse(respuesta)
